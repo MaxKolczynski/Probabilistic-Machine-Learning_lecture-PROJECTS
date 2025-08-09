@@ -186,4 +186,34 @@ Thumbs.db
 # Visual Studio Code workspace storage
 # .vscode-test/
 # Visual Studio Code settings
-# .vscode/settings.json
+# .vscode/settings.json# OS/IDE
+.DS_Store
+.vscode/
+.idea/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+.ipynb_checkpoints/
+
+# Projektausgaben (nicht versionieren)
+26-1KMXXXX_rna_seq/results/
+26-1KMXXXX_rna_seq/Report/
+26-1KMXXXX_rna_seq/screenshots/
+26-1KMXXXX_rna_seq/presentation/
+26-1KMXXXX_rna_seq/lectures/
+26-1KMXXXX_rna_seq/literature/
+# Korrekte projektbezogene Pfade (vom Repo-Root aus)
+projects/26-1KMXXXX_rna_seq/results/
+projects/26-1KMXXXX_rna_seq/Report/
+projects/26-1KMXXXX_rna_seq/screenshots/
+projects/26-1KMXXXX_rna_seq/presentation/
+projects/26-1KMXXXX_rna_seq/lectures/
+projects/26-1KMXXXX_rna_seq/literature/

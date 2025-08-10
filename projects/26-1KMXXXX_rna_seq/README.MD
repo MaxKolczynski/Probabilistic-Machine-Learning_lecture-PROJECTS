@@ -1,6 +1,4 @@
-# NB-GLM bulk RNA-seq (NASH vs. Healthy)
-
-## Struktur
+# Repository Structure
 
 project/
 ├─ data/

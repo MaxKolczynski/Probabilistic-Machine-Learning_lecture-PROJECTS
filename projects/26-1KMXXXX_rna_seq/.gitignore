@@ -1,11 +1,6 @@
-outputs/**/*.png
-outputs/**/*.pdf
-outputs/**/*.csv
-outputs/**/Rplots.pdf
 .Rhistory
 .Rproj.user/
 .RData
 .Rcache/
 *.Rproj
 .DS_Store
-outputs/**/*.h5ad

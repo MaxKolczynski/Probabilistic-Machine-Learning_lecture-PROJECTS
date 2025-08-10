@@ -27,3 +27,5 @@ install.packages(c(
   "pheatmap","RColorBrewer","ggrepel","conflicted"
 ))
 
+
+> file.exists(here::here("data/GSE126848_raw_counts_GRCh38.p13_NCBI.tsv"))

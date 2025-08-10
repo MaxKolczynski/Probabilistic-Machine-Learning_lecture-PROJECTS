@@ -1,5 +1,6 @@
-# Repository Structure
+# Repository Tree Structure
 
+```
 project/
 ├─ data/  
 │  ├─ GSE126848_raw_counts_GRCh38.p13_NCBI.tsv  
@@ -15,7 +16,8 @@ project/
 │  ├─ 04_qc_plots.R  
 │  ├─ 05_nb_glm.R  
 │  └─ 06_export.R  
-└─ main.R  
+└─ main.R
+```
 
 ## Setup
 

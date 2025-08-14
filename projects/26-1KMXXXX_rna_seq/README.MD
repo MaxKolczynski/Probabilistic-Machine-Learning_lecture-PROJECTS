@@ -1,5 +1,5 @@
 
-# 
+# Differential Gene Expression detection via Generalized Linear Models
 
 This repository contains a probabilistic machine learning project for detecting differentially expressed genes using generalized linear models. 
 

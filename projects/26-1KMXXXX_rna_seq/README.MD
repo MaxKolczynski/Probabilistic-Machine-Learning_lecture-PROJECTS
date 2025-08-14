@@ -43,7 +43,7 @@ Please refer to requirements.txt
 
 2. go the the root directory: ```cd projects/26-1KMXXXX_rna_seq```  
 
-3. Simply execute ```Rscript main.R``` to get the entire piepline running. This will automatically procude figures and tables that can be found in the ```outputs``` fodler. 
+3. Simply execute ```Rscript main.R``` to get the entire piepline running. This will automatically procude figures and tables that can be found in the ```outputs``` folder. 
 
 ## Notes on the code modules
 

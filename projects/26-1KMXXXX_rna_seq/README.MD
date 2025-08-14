@@ -17,6 +17,7 @@ project/
 ├─ data/  
 │  ├─ GSE126848_raw_counts_GRCh38.p13_NCBI.tsv   # count matrix
 │  └─ sample_lists.yaml                          # sample mapping 
+│  └─ metadata.tsv
 │ 
 ├─ outputs/  
 │  ├─ figures/  

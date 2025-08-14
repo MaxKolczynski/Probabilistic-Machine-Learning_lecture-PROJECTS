@@ -123,5 +123,9 @@ install.packages(c(
   "pheatmap","RColorBrewer","ggrepel","conflicted"
 ))
 
+## Dependencies 
+
+Please refer to requirements.txt
+
 
 

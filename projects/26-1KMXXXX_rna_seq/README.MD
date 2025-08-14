@@ -30,6 +30,23 @@ project/
 └─ main.R
 ```
 
+# Using this Repository
+
+## Dependencies 
+
+Please refer to requirements.txt
+
+## Setup
+
+1. Clone the Repository: 
+```git clone```
+
+2. go the the root directory: 
+
+```Probabilistic-Machine-Learning_lecture-PROJECTS/projects/```  
+
+3. Simply execute ```Rscript main.R``` to get the entire piepline running. This will automatically procude figures and tables that can be found in the ```outputs``` fodler. 
+
 # Notes on the code modules
 
 ## 00_utils.R  
@@ -112,15 +129,6 @@ Exports results and (optionally) creates a publication-style volcano plot.
 
 Return value: returns the exported DEG table  ￼
 
-
-# Setup
-
-Simply execute ```Rscript main.R``` to get the entire piepline running. This will automatically procude figures and tables that can be found in the ```outputs``` fodler. 
-
-
-## Dependencies 
-
-Please refer to requirements.txt
 
 
 

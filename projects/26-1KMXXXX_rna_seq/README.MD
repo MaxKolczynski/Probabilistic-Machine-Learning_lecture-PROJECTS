@@ -34,21 +34,20 @@ project/
 
 ## 00_utils.R  
 
-> Small shared helpers
-
-	-	log_info(...): timestamped console logging.
-	-	assert_nonempty_matrix(m, name): stops if a matrix/data.frame is empty (clear error message with dims).
-	-	ensure_dir(path): creates directories recursively if missing.
+Small shared helpers
+-	log_info(...): timestamped console logging.
+-	assert_nonempty_matrix(m, name): stops if a matrix/data.frame is empty (clear error message with dims).
+-	ensure_dir(path): creates directories recursively if missing.
 
 Used throughout for robust checks and clean console output.
 
 ## 01_load_data.R  
 
-	- Loads packages: tidyverse, MASS, ggplot2, ggrepel, pheatmap, RColorBrewer, pbapply, matrixStats.
-	-	Reads raw count matrix and sample metadata (assumes columns are sample IDs).
-	-	Aligns counts to the present samples; builds colData with sample, condition (factor with levels Healthy, NASH).
-	-	Renames columns to stable sample labels (e.g., Healthy_1, NASH_1) and sets matching rownames in colData.
-	-	Prints a brief condition summary to the console.
+- Loads packages: tidyverse, MASS, ggplot2, ggrepel, pheatmap, RColorBrewer, pbapply, matrixStats.
+-	Reads raw count matrix and sample metadata (assumes columns are sample IDs).
+-	Aligns counts to the present samples; builds colData with sample, condition (factor with levels Healthy, NASH).
+-	Renames columns to stable sample labels (e.g., Healthy_1, NASH_1) and sets matching rownames in colData.
+-	Prints a brief condition summary to the console.
 
 Output objects: counts (genes × samples), colData (rows = samples, columns: sample, condition).
 

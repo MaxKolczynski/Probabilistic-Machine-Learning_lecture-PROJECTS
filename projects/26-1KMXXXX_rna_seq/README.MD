@@ -3,13 +3,13 @@
 
 This repository contains a probabilistic machine learning project for detecting differentially expressed genes using generalized linear models. 
 
-# 🧬 Dataset 
+# Dataset 
 
 The dataset is publicy available under the Gene Expression Omnibus (GEO) Acession number: [GSE126848](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126848)
 
 The original Pubilcation can be found [here](https://pubmed.ncbi.nlm.nih.gov/30653341/)
 
-# 📂 Repository Tree Structure
+# Repository Tree Structure
 
 ```
 project/

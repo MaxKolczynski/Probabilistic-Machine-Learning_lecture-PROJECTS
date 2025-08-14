@@ -13,12 +13,15 @@ The original Pubilcation can be found [here](https://pubmed.ncbi.nlm.nih.gov/306
 
 ```
 project/
+│ 
 ├─ data/  
 │  ├─ GSE126848_raw_counts_GRCh38.p13_NCBI.tsv   # count matrix
 │  └─ sample_lists.yaml                          # sample mapping 
+│ 
 ├─ outputs/  
 │  ├─ figures/  
 │  └─ tables/  
+│ 
 ├─ scripts/  
 │  ├─ 00_utils.R  
 │  ├─ 01_load_data.R  
@@ -27,7 +30,10 @@ project/
 │  ├─ 04_qc_plots.R  
 │  ├─ 05_nb_glm.R  
 │  └─ 06_export.R  
+│ 
 └─ main.R
+└─ requirements.txt
+└─ README.md
 ```
 
 # Using this Repository

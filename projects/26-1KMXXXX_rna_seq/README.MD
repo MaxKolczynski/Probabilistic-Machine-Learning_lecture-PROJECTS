@@ -47,9 +47,9 @@ Please refer to requirements.txt
 
 3. Simply execute ```Rscript main.R``` to get the entire piepline running. This will automatically procude figures and tables that can be found in the ```outputs``` fodler. 
 
-# Notes on the code modules
+## Notes on the code modules
 
-## 00_utils.R  
+### 00_utils.R  
 
 Small shared helpers
 -	log_info(...): timestamped console logging.
@@ -58,7 +58,7 @@ Small shared helpers
 
 Used throughout for robust checks and clean console output.
 
-## 01_load_data.R  
+### 01_load_data.R  
 
 - Loads packages: ```tidyverse```, ```MASS```, ```ggplot2```, ```ggrepel```, ```pheatmap```, ```RColorBrewer```, ```pbapply```, ```matrixStats```
 -	Reads raw count matrix and sample metadata (assumes columns are sample IDs)
@@ -68,7 +68,7 @@ Used throughout for robust checks and clean console output.
 
 Output objects: counts (genes × samples), colData (rows = samples, columns: sample, condition).
 
-## 02_filter_qc.R  
+### 02_filter_qc.R  
 
 Gene-level QC and filtering to remove noise and obvious artifacts.
 	-	Quick diagnostics: library-size summary, number of all-zero genes.
@@ -80,7 +80,7 @@ Gene-level QC and filtering to remove noise and obvious artifacts.
 
 Output object: counts_filt.
 
-## 03_normalize.R  
+### 03_normalize.R  
 
 Manual median-of-ratios (DESeq-style) size-factor normalization + log2 transform.
 -	Adds pseudocount (+1) to avoid log(0).
@@ -92,7 +92,7 @@ Manual median-of-ratios (DESeq-style) size-factor normalization + log2 transform
 
 Output objects: size_factors (named vector), norm_counts, logcounts.
 
-## 04_qc_plots.R  
+### 04_qc_plots.R  
 
 Generates and saves core QC visualizations.
 - Robustly aligns expression matrices and colData (diagnoses missing/mismatched sample names).
@@ -104,7 +104,7 @@ Generates and saves core QC visualizations.
 Side effects: creates outdir_figs if needed and writes figure files there.
 
 
-## 05_nb_glm.R  
+### 05_nb_glm.R  
 
 Per-gene Negative Binomial GLM with library-size offset (median-of-ratios).
 -	Strict alignment of counts_filt, colData, and size_factors; stops early with a detailed message if inconsistent.
@@ -116,7 +116,7 @@ Per-gene Negative Binomial GLM with library-size offset (median-of-ratios).
 
 Output object: data.frame with columns: gene, logFC, se, pval, padj 
 
-## 06_export.R  
+### 06_export.R  
 
 Exports results and (optionally) creates a publication-style volcano plot.
 -	Computes baseMean per gene from norm_counts.

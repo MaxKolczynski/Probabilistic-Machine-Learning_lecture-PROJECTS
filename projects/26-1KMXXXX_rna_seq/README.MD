@@ -43,11 +43,11 @@ Used throughout for robust checks and clean console output.
 
 ## 01_load_data.R  
 
-- Loads packages: tidyverse, MASS, ggplot2, ggrepel, pheatmap, RColorBrewer, pbapply, matrixStats.
--	Reads raw count matrix and sample metadata (assumes columns are sample IDs).
--	Aligns counts to the present samples; builds colData with sample, condition (factor with levels Healthy, NASH).
--	Renames columns to stable sample labels (e.g., Healthy_1, NASH_1) and sets matching rownames in colData.
--	Prints a brief condition summary to the console.
+- Loads packages: ```tidyverse```, ```MASS```, ```ggplot2```, ```ggrepel```, ```pheatmap```, ```RColorBrewer```, ```pbapply```, ```matrixStats```
+-	Reads raw count matrix and sample metadata (assumes columns are sample IDs)
+-	Aligns counts to the present samples; builds colData with sample, condition (factor with levels Healthy, NASH)
+-	Renames columns to stable sample labels (e.g., Healthy_1, NASH_1) and sets matching rownames in colData
+-	Prints a brief condition summary to the console
 
 Output objects: counts (genes × samples), colData (rows = samples, columns: sample, condition).
 
@@ -66,23 +66,23 @@ Output object: counts_filt.
 ## 03_normalize.R  
 
 Manual median-of-ratios (DESeq-style) size-factor normalization + log2 transform.
-	-	Adds pseudocount (+1) to avoid log(0).
-	-	Computes geometric mean per gene, forms per-sample ratios (counts / geo mean).
-	-	Size factor for each sample = median of its ratios.
-	-	Normalized counts = raw counts / size factor.
-  - logcounts = log2(norm_counts + 1) for visualization.
-	-	Prints size-factor vector and summary.
+-	Adds pseudocount (+1) to avoid log(0).
+-	Computes geometric mean per gene, forms per-sample ratios (counts / geo mean).
+-	Size factor for each sample = median of its ratios.
+-	Normalized counts = raw counts / size factor.
+ - logcounts = log2(norm_counts + 1) for visualization.
+-	Prints size-factor vector and summary.
 
 Output objects: size_factors (named vector), norm_counts, logcounts.
 
 ## 04_qc_plots.R  
 
 Generates and saves core QC visualizations.
-	- Robustly aligns expression matrices and colData (diagnoses missing/mismatched sample names).
-	- PCA on logcounts (center/scale): plots PC1–PC2 with samples colored by condition; saves pca.png.
-	- Boxplot of logcounts distributions per sample; saves boxplot_logcounts.png.
-	- Correlation heatmap (sample–sample Pearson cor(logcounts)), with a qualitative palette; saves cor_heatmap.png.
-	- Mean–variance plot on norm_counts (log–log scale) with Poisson reference line (Var=Mean); saves var_vs_mean.png.
+- Robustly aligns expression matrices and colData (diagnoses missing/mismatched sample names).
+- PCA on logcounts (center/scale): plots PC1–PC2 with samples colored by condition; saves pca.png.
+- Boxplot of logcounts distributions per sample; saves boxplot_logcounts.png.
+- Correlation heatmap (sample–sample Pearson cor(logcounts)), with a qualitative palette; saves cor_heatmap.png.
+- Mean–variance plot on norm_counts (log–log scale) with Poisson reference line (Var=Mean); saves var_vs_mean.png.
 
 Side effects: creates outdir_figs if needed and writes figure files there.
 
@@ -90,25 +90,25 @@ Side effects: creates outdir_figs if needed and writes figure files there.
 ## 05_nb_glm.R  
 
 Per-gene Negative Binomial GLM with library-size offset (median-of-ratios).
-	-	Strict alignment of counts_filt, colData, and size_factors; stops early with a detailed message if inconsistent.
-	-	Builds design: ~ condition with Healthy as reference (factor levels set earlier).
-	-	For each gene: fits MASS::glm.nb(counts ~ condition + offset(log(size_factor))).
-	-	Extracts the conditionNASH coefficient as log2 fold change proxy (logFC), its SE, and Wald p-value.
-	-	Adjusts p-values via Benjamini–Hochberg (padj).
-	-	Prints DEG counts (FDR<0.05; up/down).
+-	Strict alignment of counts_filt, colData, and size_factors; stops early with a detailed message if inconsistent.
+-	Builds design: ~ condition with Healthy as reference (factor levels set earlier).
+-	For each gene: fits MASS::glm.nb(counts ~ condition + offset(log(size_factor))).
+-	Extracts the conditionNASH coefficient as log2 fold change proxy (logFC), its SE, and Wald p-value.
+-	Adjusts p-values via Benjamini–Hochberg (padj).
+-	Prints DEG counts (FDR<0.05; up/down).
 
 Output object: data.frame with columns: gene, logFC, se, pval, padj 
 
 ## 06_export.R  
 
 Exports results and (optionally) creates a publication-style volcano plot.
-	-	Computes baseMean per gene from norm_counts.
-	-	Cleans and augments results: keeps finite (logFC, pval, padj), adds baseMean and a simple Wald stat = logFC / se.
-	-	Writes a CSV table to outputs/tables/nb_glm_differential_expression_results.csv (path configurable).
-	-	Volcano plot: x = logFC, y = -log10(padj).
-	-	Colors points by regulation (Up/Down/NS) using thresholds |log2FC| ≥ log2fc_cutoff and padj ≤ padj_cutoff (defaults: 1 and 0.05).
-	-	Adds dashed guides at the chosen cutoffs; x-limits clipped to a reasonable range.
-	-	Saves to outputs/figures/volcano_plot.png (path configurable).
+-	Computes baseMean per gene from norm_counts.
+-	Cleans and augments results: keeps finite (logFC, pval, padj), adds baseMean and a simple Wald stat = logFC / se.
+-	Writes a CSV table to outputs/tables/nb_glm_differential_expression_results.csv (path configurable).
+-	Volcano plot: x = logFC, y = -log10(padj).
+-	Colors points by regulation (Up/Down/NS) using thresholds |log2FC| ≥ log2fc_cutoff and padj ≤ padj_cutoff (defaults: 1 and 0.05).
+-	Adds dashed guides at the chosen cutoffs; x-limits clipped to a reasonable range.
+-	Saves to outputs/figures/volcano_plot.png (path configurable).
 
 Return value: returns the exported DEG table  ￼
 

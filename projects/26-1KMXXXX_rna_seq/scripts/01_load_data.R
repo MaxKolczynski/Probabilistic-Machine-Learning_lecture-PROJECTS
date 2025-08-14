@@ -25,6 +25,9 @@ log_info("Genes (rows):", nrow(counts_raw))
 log_info("Samples (cols):", ncol(counts_raw))
 
 # ------------------ Sample IDs ------------------
+
+# this information stems from the metadata file (also given in the repository)
+
 nash_samples <- c(
   "GSM3615308","GSM3615309","GSM3615310","GSM3615311","GSM3615312",
   "GSM3615313","GSM3615314","GSM3615315","GSM3615316","GSM3615317",

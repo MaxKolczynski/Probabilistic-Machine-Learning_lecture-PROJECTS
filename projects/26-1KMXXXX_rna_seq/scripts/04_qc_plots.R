@@ -63,7 +63,7 @@ qc_save_plots <- function(logcounts, colData, outdir_figs) {
   )
 }
 
-# Variance~Mean (with red Poisson reference)
+# ------- Variance~Mean -------- 
 disp_save_plots <- function(norm_counts, outdir_figs) {
   ensure_dir(outdir_figs)
 

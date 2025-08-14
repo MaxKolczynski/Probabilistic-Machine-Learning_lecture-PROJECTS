@@ -1,5 +1,5 @@
 # R/03_normalize.R
-# Manual median-of-ratios normalization (DESeq-style) + log2 transform
+# Manual median-of-ratios normalization (DESeq2-style) + log2 transform
 
 normalize_mor <- function(counts_filt) {
   assert_nonempty_matrix(counts_filt, "counts_filt")

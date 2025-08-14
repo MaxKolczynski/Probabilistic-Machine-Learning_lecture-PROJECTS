@@ -45,14 +45,14 @@ project/
 
 Please refer to requirements.txt
 
-## Setup
+## Setup and run piepline
 
 1. Clone the Repository: 
 ```git clone https://github.com/MaxKolczynski/Probabilistic-Machine-Learning_lecture-PROJECTS.git```
 
 2. go the the root directory: ```cd projects/26-1KMXXXX_rna_seq```  
 
-3. Simply execute ```Rscript main.R``` to get the entire piepline running. This will automatically procude figures and tables that can be found in the ```outputs``` folder. 
+3. Simply execute ```Rscript main.R``` to get the entire piepline running. It will automatically fetch the modules from the ``scripts/``folder. Figures and tables that can be found in the ```outputs``` folder. 
 
 ## Notes on the code modules
 

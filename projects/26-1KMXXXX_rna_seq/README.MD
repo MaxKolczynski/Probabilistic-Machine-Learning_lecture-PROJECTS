@@ -34,6 +34,8 @@ project/
 └─ main.R
 └─ requirements.txt
 └─ README.md
+│ 
+└─ report.pdf
 ```
 
 # Using this Repository

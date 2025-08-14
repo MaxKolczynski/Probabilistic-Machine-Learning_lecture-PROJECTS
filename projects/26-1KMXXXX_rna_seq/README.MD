@@ -19,7 +19,7 @@ project/
 ├─ outputs/  
 │  ├─ figures/  
 │  └─ tables/  
-├─ R/  
+├─ scripts/  
 │  ├─ 00_utils.R  
 │  ├─ 01_load_data.R  
 │  ├─ 02_filter_qc.R  

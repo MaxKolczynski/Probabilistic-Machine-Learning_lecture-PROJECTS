@@ -42,7 +42,7 @@ project/
 
 # Setup
 
-Simply execute ```Rscript main.R`` to get the entire piepline running. This will automatically procude figures and tables that can be found in the ```outputs``` fodler. 
+Simply execute ```Rscript main.R``` to get the entire piepline running. This will automatically procude figures and tables that can be found in the ```outputs``` fodler. 
 
 ```r
 install.packages(c(

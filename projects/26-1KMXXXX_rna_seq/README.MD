@@ -41,9 +41,7 @@ Please refer to requirements.txt
 1. Clone the Repository: 
 ```git clone https://github.com/MaxKolczynski/Probabilistic-Machine-Learning_lecture-PROJECTS.git```
 
-2. go the the root directory: 
-
-```cd projects/26-1KMXXXX_rna_seq```  
+2. go the the root directory: ```cd projects/26-1KMXXXX_rna_seq```  
 
 3. Simply execute ```Rscript main.R``` to get the entire piepline running. This will automatically procude figures and tables that can be found in the ```outputs``` fodler. 
 

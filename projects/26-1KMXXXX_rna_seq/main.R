@@ -26,13 +26,13 @@ cfg <- list(
 )
 
 # ---------- Source modules ----------
-source(here::here("R/00_utils.R"))
-source(here::here("R/01_load_data.R"))  # defines counts_raw, counts, colData
-source(here::here("R/02_filter_qc.R"))
-source(here::here("R/03_normalize.R"))
-source(here::here("R/04_qc_plots.R"))
-source(here::here("R/05_nb_glm.R"))
-source(here::here("R/06_export.R"))
+source(here::here("scripts/00_utils.R"))
+source(here::here("scripts/01_load_data.R"))  # defines counts_raw, counts, colData
+source(here::here("scripts/02_filter_qc.R"))
+source(here::here("scripts/03_normalize.R"))
+source(here::here("scripts/04_qc_plots.R"))
+source(here::here("scripts/05_nb_glm.R"))
+source(here::here("scripts/06_export.R"))
 
 # ---------- Ensure output folders ----------
 ensure_dir(cfg$out_tables)

@@ -117,11 +117,6 @@ Return value: returns the exported DEG table  ￼
 
 Simply execute ```Rscript main.R``` to get the entire piepline running. This will automatically procude figures and tables that can be found in the ```outputs``` fodler. 
 
-```r
-install.packages(c(
-  "tidyverse","here","yaml","matrixStats","MASS","pbapply",
-  "pheatmap","RColorBrewer","ggrepel","conflicted"
-))
 
 ## Dependencies 
 
